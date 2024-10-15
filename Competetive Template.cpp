@@ -1,8 +1,17 @@
 #include<bits/stdc++.h>
+#define F first
+#define S second
+#define eb emplace_back
+#define pb push_back
 #define ll long long
+#define sz(x) x.size()
+#define all(x) x.begin(),x.end()
+#define vi vector<int>
 const char nl = '\n';
-const int MOD = 1e9 + 7;
+#define ump unordered_map
 using namespace std;
+const int MOD = 1e9 + 7;
+
 
 // seive 
 const int N = 1e7+10;
