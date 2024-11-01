@@ -12,9 +12,17 @@ const char nl = '\n';
 using namespace std;
 const int MOD = 1e9 + 7;
 
+void io() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
+}
 
-// seive 
-const int N = 1e7+10;
+// sieve
+const int N = 1e7 + 10;
 vector<bool>isPrime(N, 1);
 void sieve() {
     isPrime[0] = isPrime[1] = false;
@@ -23,22 +31,22 @@ void sieve() {
         if (isPrime[i] == true) {
             for (int j = i * 2; j < N; j += i) {
                 isPrime[j] = false;
-	    }
+            }
         }
     }
 }
 // prime factor
-void pf(){
-ump<int, int>prime_factors;
-        prime_factors.clear();
-        int num = n;
-        while (num > 1) {
-            int prime_factor = hp[num];
-            while (num % prime_factor == 0) {
-                num /= prime_factor;
-                prime_factors[prime_factor]++;
-            }
+void pf() {
+    ump<int, int>prime_factors;
+    prime_factors.clear();
+    int num = n;
+    while (num > 1) {
+        int prime_factor = hp[num];
+        while (num % prime_factor == 0) {
+            num /= prime_factor;
+            prime_factors[prime_factor]++;
         }
+    }
 }
 // binary multi
 ll binMulti(ll a, ll b) {
@@ -67,7 +75,7 @@ ll binexpIter(int a, int b, int mod) {
 
 
 // binary search
-int binary_search(vector<int>&v, int c) {
+int binary_search(vi &v, int c) {
     int lo = 0, hi = v.size() - 1;
     int a = -1;
     while (hi >= lo) {
@@ -84,12 +92,11 @@ int binary_search(vector<int>&v, int c) {
 }
 
 
-void solve(){
+void solve() {
 
 }
 int main() {
-    ios::sync_with_stdio(0);
-    cin.tie(0);
+    io()
     int tt = 1;
     //cin >> tt;
     for (int t = 1; t <= tt; t++) {
