@@ -21,6 +21,19 @@ void io() {
 #endif
 }
 
+bool cmp (pair<int, int>& a, pair<int, int>& b)
+{
+    if (a.F == b.F) return a.S < b.S;
+    return a.F > b.F;
+}
+
+struct c_cmp {
+    bool operator()(const pair<int, int>& a, const pair<int, int>& b) const {
+        if (a.F == b.F) return a.S < b.S;
+        return a.F > b.F;
+    }
+};
+
 // sieve
 const int N = 1e7 + 10;
 vector<bool>isPrime(N, 1);
