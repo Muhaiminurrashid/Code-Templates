@@ -17,3 +17,18 @@ void bfs(int vex, vector<bool>&vis, vector<vector<int>>&adj, int a[]) {
     }
     ans += mn;
 }
+// dfs
+vector<node>g[N];
+vector<bool>vis(N);
+
+
+void dfs(int vertex) {
+
+    vis[vertex] = true;
+ 
+    for (auto& child : g[vertex]) {
+        if (vis[child]) continue;
+
+        dfs(child);
+    }
+}
